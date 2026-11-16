@@ -1,0 +1,20 @@
+header{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+header img{
+  width: 100px;
+  height: auto;
+}
+header div h1{
+  font-size: 3rem;
+  margin-top: 0px;
+}
+header div p{
+  margin-top: 0px;
+}
+
