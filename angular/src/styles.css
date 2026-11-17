@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --rojo-claro: #f1d7d7;
+    --azul-texto: #253746;
+    --amarillo: #ffd758;
+    --crema: #fffdfa;
+    --borde: #324957;
+    --gris: #c1c1c1;
+
+}
+
+body {
+    min-width: 320px;
+    color: var(--azul-texto);
+    font-family: Arial, sans-serif;
+}
