@@ -1,0 +1,36 @@
+<header>
+    <img src="angular-icon.svg" alt="Icono de Angular">
+    <div>
+        <h1>Listar usuarios</h1>
+        <p>Nicolás Cedillo</p>
+    </div>
+</header>
+
+<main>
+    @if (service.loading()) {
+    <p>Cargando…</p>
+  }
+
+  @if (service.error()) {
+    <p class="sin-resultados">{{ service.error() }}</p>
+  }
+
+  <section class="row">
+    
+    <app-campo-busqueda></app-campo-busqueda>
+
+    <div >
+      @if (!service.loading() && !service.error() && service.filtered().length === 0) {
+        <p class="sin-resultados">Sin resultados</p>
+      }@else {
+          <app-tarjetas-list
+        [users]="service.filtered()"
+        listName="Usuarios"
+        (favToggled)="service.toggleFav($event)"
+            ></app-tarjetas-list>
+      }
+    </div>
+  </section>
+
+
+</main>

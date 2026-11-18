@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { Users } from '../../interfaces/users';
 
 @Component({
-  imports: [],
   selector: 'app-tarjeta-usuario',
-  styleUrl: './tarjeta-usuario.css',
   templateUrl: './tarjeta-usuario.html',
+  styleUrl: './tarjeta-usuario.css',
 })
 export class TarjetaUsuario {
-  
+  user = input.required<Users>();
+  favToggled = output<number>();
 }

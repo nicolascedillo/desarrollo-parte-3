@@ -1,0 +1,11 @@
+
+<div class="lista">
+    @for (users of users(); track users.id; let idx = $index) {
+        <app-tarjeta-usuario
+        [user]="users"
+        (favToggled)="favToggled.emit($event)"
+        ></app-tarjeta-usuario>
+    }
+
+</div>
+

@@ -1,5 +1,11 @@
-<input type="text" 
-        name="campo-busqueda-nombre" 
-        id="buscar-usuario"
-        placeholder="Buscar por nombre"
-        >
+<div class="barra-herramientas">
+        <input type="text" 
+                name="campo-busqueda-nombre" 
+                id="buscar-usuario"
+                placeholder="Buscar por nombre"
+                [value]="service.search()"
+                (input)="service.buscar($any($event.target).value)"
+                >
+
+        <p>Favoritos: {{ service.favCount() }}</p>
+</div>
