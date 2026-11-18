@@ -12,13 +12,13 @@
     margin: 0.25rem 0;
 }
 
-.tarjeta p:first-child {
+.nombre{
     margin-top: 0;
     color: var(--azul-texto);
     font-weight: bold;
 }
 
-.tarjeta p:not(:first-child) {
+.extra{
     color: var(--gris);
 }
 
