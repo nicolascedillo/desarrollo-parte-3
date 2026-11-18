@@ -6,6 +6,35 @@ Nombre: Nicolás Cedillo
 
 ### Angular 
 
+Instalar Angular CLI
+```shell
+npm install -g @angular/cli
+```
+
+Creación del proyecto
+```shell
+ng new angular --routing --style css
+```
+
+Levantar el servidor
+```shell
+ng serve
+```
+
+Ejecutar pruebas
+```shell
+npm test -- --watch=false
+```
+
+Ejecutar una sola prueba
+```shell
+npm test -- --watch=false --include src/app/services/usuarios.spec.ts
+```
+
+Generar versión para producción
+```shell
+npm run build
+```
 
 ### React
 
@@ -46,13 +75,33 @@ npm run build
 ### Angular
 
 1. Proyecto corriendo
-2. "Cargando…"
+![](./docs/angular/funcionando.png)
+
+2. "Cargando"
+![](./docs/angular/cargando.png)
+
 3. Mensaje de error
+![](./docs/angular/error.png)
+
 4. Lista de tarjetas
+![](./docs/angular/listado.png)
+
+
 5. Búsqueda filtrando
+![](./docs/angular/filtro.png)
+
+
 6. Favoritos + contador
+![](./docs/angular/contador.png)
+
+
 7. Prueba unitaria pasando
+![](./docs/angular/test.png)
+
+
 8. Extras
+![](./docs/angular/sin_res.png)
+
 
 ### React 
 

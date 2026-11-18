@@ -12,3 +12,19 @@
   border-radius: 0.4rem;
   background-color: white;
 }
+
+@media (max-width: 520px) {
+
+  .barra-herramientas {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .barra-herramientas input {
+    width: 100%;
+  }
+
+  .contador-favoritos {
+    margin: 0;
+  }
+}

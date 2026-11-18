@@ -14,3 +14,30 @@ body {
     color: var(--azul-texto);
     font-family: Arial, sans-serif;
 }
+
+@media (max-width: 520px) {
+  header {
+    justify-content: flex-start;
+  }
+
+  header div h1 {
+    font-size: 1.7rem;
+  }
+
+  header img {
+    width: 60px;
+  }
+
+  .barra-herramientas {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .barra-herramientas input {
+    width: 100%;
+  }
+
+  .contador-favoritos {
+    margin: 0;
+  }
+}

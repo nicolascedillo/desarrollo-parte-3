@@ -1,15 +1,43 @@
-import { TestBed } from '@angular/core/testing';
-import { UsuariosServicio } from './usuarios';
+import { Users } from '../interfaces/users';
+import { filtrarPorNombre } from './usuarios';
 
-describe('Usuarios', () => {
-  let service: UsuariosServicio;
+const usuarios: Users[] = [
+  {
+    id: 1,
+    name: 'Leanne Graham',
+    correo: 'leanne@example.com',
+    ciudad: 'Gwenborough',
+    isFav: false,
+  },
+  {
+    id: 2,
+    name: 'Ervin Howell',
+    correo: 'ervin@example.com',
+    ciudad: 'Wisokyburgh',
+    isFav: false,
+  },
+  {
+    id: 3,
+    name: 'Clementine Bauch',
+    correo: 'clementine@example.com',
+    ciudad: 'McKenziehaven',
+    isFav: false,
+  },
+];
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(UsuariosServicio);
+describe('filtrarPorNombre', () => {
+  it('filtra por nombre a pesar de mayúsculas', () => {
+    const resultado = filtrarPorNombre(usuarios, 'LEANNE');
+
+    expect(resultado).toHaveLength(1);
+    expect(resultado[0].name).toBe('Leanne Graham');
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('devuelve todos si la búsqueda está vacía', () => {
+    expect(filtrarPorNombre(usuarios, '')).toHaveLength(3);
+  });
+
+  it('devuelve una lista vacía si no encuentra a nadie', () => {
+    expect(filtrarPorNombre(usuarios, 'zzz')).toHaveLength(0);
   });
 });

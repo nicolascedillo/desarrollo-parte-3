@@ -12,22 +12,23 @@
   }
 
   @if (service.error()) {
-    <p class="sin-resultados">{{ service.error() }}</p>
+    <p>{{ service.error() }}</p>
   }
 
   <section class="row">
-    
+
     <app-campo-busqueda></app-campo-busqueda>
 
     <div >
       @if (!service.loading() && !service.error() && service.filtered().length === 0) {
         <p class="sin-resultados">Sin resultados</p>
+
       }@else {
-          <app-tarjetas-list
-        [users]="service.filtered()"
-        listName="Usuarios"
-        (favToggled)="service.toggleFav($event)"
-            ></app-tarjetas-list>
+        <app-tarjetas-list
+           [users]="service.filtered()"
+           listName="Usuarios"
+          (favToggled)="service.toggleFav($event)"
+        ></app-tarjetas-list>
       }
     </div>
   </section>
